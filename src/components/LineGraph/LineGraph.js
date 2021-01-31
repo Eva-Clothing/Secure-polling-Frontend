@@ -6,6 +6,8 @@ import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { fetchFalsePolls, fetchTruePolls } from '../../redux/actionCreators'
+import Header from "../header/Header"
+import DrawerTag from "../Drawer"
 
 
 const mapStateToProps = (state) => {
@@ -97,6 +99,8 @@ class LineGraph extends Component {
         }
         return (
             <>
+            <Header/>
+            <DrawerTag classes={this.props.classes}/>
                 <Card className="lineStyle">
                     <CardContent>
                         <h1>Visualization of Result</h1>

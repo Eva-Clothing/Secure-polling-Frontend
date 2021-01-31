@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Header from "../header/Header"
+import DrawerTag from "../Drawer"
 import './DataTable.css'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
@@ -20,6 +22,8 @@ const mapDispatchToProps = (dispatch) => ({
     fetchData: () => dispatch(fetchData())
 })
 
+
+  
 class DataTable extends Component {
 
     constructor(props) {
@@ -34,6 +38,7 @@ class DataTable extends Component {
     }
 
     render() {
+        
         if (this.props.isLoading) {
             return (
                 <>
@@ -48,7 +53,8 @@ class DataTable extends Component {
 
         }
         else return (
-            <>
+            <>   <Header />
+                <DrawerTag classes= {this.props.classes}/>
                 <Card className="app_center">
                     <CardContent color="textSecondary">
                         <h2>Data of person casted the votes</h2>

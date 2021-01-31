@@ -1,10 +1,14 @@
 import { Card, CardContent } from '@material-ui/core'
 import React from 'react'
 import './Instructions.css'
+import Header from "../header/Header"
+import DrawerTag from "../Drawer"
 
-function Instructions() {
+function Instructions(props) {
     return (
         <>
+        <Header/>
+        <DrawerTag classes={props.classes}/>
         <Card className="info">
             <CardContent color="textSecondary">
                 <h2>Instructions🛑</h2>

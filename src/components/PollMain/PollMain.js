@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import PollRoundedIcon from '@material-ui/icons/PollRounded';
 import { Avatar } from '@material-ui/core';
+import Header from "../header/Header"
+import DrawerTag from "../Drawer"
 import M from 'materialize-css'
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -100,7 +102,9 @@ class pollMain extends Component {
         const paperStyle = { padding: 20, height: '70vh', width: "30%", margin: '20px auto', borderRadius: '30px' }
         const textFieldCSS = { margin: '20px 0px' }
         return (
-
+            <div>
+          <Header/>
+            <DrawerTag classes={this.props.classes}/>
             <Grid>
                 <Snackbar open={this.state.open} autoHideDuration={6000} onClose={this.handleClose}>
                     <Alert onClose={this.handleClose} severity="success">
@@ -154,6 +158,8 @@ class pollMain extends Component {
                     </Paper>
                 </form>
             </Grid>
+            </div>
+            
 
         )
 
