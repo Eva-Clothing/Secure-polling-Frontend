@@ -9,25 +9,25 @@ import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
 import { Link } from "react-router-dom"
 import React from "react"
 
-function DrawerTag({ classes }) {
-  return (
-    <div style={{ display: 'flex' }}>
-      <Drawer
-        style={{ width: "22%" }}
-        variant="persistent"
-        anchor="left"
-        open={true}
-        classes={{ paper: classes.drawerPaper }}
-      >
-        <List>
-          <Link to='/' className={classes.link} >
-            <ListItem button>
-              <ListItemIcon>
-                <InfoRoundedIcon />
-              </ListItemIcon>
-              <ListItemText primary="Instructions" />
-            </ListItem>
-          </Link>
+function DrawerTag ({classes}){
+    return (
+        <div style={{ display: 'flex' }}>
+            <Drawer
+              style={{ width: "22%" }}
+              variant="persistent"
+              anchor="left"
+              open={true}
+              classes={{ paper: classes.drawerPaper }}
+            >
+              <List>
+                <Link to='/instructions' className={classes.link} >
+                  <ListItem button>
+                    <ListItemIcon>
+                      <InfoRoundedIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Instructions" />
+                  </ListItem>
+                </Link>
 
           <Link to='/vote' className={classes.link} >
             <ListItem button>

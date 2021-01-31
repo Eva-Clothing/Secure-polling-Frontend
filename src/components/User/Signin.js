@@ -1,4 +1,3 @@
-
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -55,11 +54,11 @@ export default function SignIn() {
 
   const onSubmit = event => {
     event.preventDefault();
-    console.log(email, password)
-    signin({ email, password })
-      .then(data => {
-
-        authenticate(data.token, () => {
+    console.log(email,password)
+    signin({email,password})
+    .then(data =>{
+             
+        authenticate(data, () => {
           setValues({
             ...values,
             didRedirect: true
