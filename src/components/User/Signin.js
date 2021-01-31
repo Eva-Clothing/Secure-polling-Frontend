@@ -54,10 +54,10 @@ export default function SignIn() {
 
   const onSubmit = event => {
     event.preventDefault();
-    console.log(email,password)
-    signin({email,password})
-    .then(data =>{
-             
+    console.log(email, password)
+    signin({ email, password })
+      .then(data => {
+
         authenticate(data, () => {
           setValues({
             ...values,
@@ -72,7 +72,7 @@ export default function SignIn() {
   }
   const performRedirect = () => {
     if (didRedirect || isAuthenticated()) {
-      return <Redirect to='/instructions' />
+      return <Redirect to='/faceDetection' />
     }
   }
 

@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Secure-Polling Application 🔐
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="https://github.com/loneWarrior581">
+    <img src="https://img.icons8.com/clouds/100/000000/survey.png" alt="Logo" width="150">
+  </a>
 
-## Available Scripts
+  <h3 align="center">Secure-Polling Application</h3>
+  <h3 align="center">Vote one Everyone🤞</h3>
+  <p align="center">
+    <br />
+    <a href="https://dazzling-dijkstra-dbd40e.netlify.app/"><strong> View Demo »</strong></a>
+    ·
+    <a href="https://github.com/loneWarrior581/Polling-app-frontend/issues">Request Feature</a>
+  </p>
+</p>
+<hr>
 
-In the project directory, you can run:
+## Introduction 🏃‍♂️
 
-### `npm start`
+### A secure polling applicatin for making the polling thing virtual and helps a person to cast vote at his own place.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Idea behind it 💡
 
-### `npm test`
+- Making voting vertual would help to cast a person his vote sitting at home , especially during the tough times of pandemic.
+- Help the person living in foreign with his constituency, and would increase the voting percentage.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Booth capturing , that happen certain areas would be pervented.
 
-### `npm run build`
+## Security Features 🔐
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Regestering and logging features using jwt and bcrypt.js for hashing the password.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **To add more to safety we have added a ML model for verification of his human nature. For that we have used a [face-api.js](https://github.com/justadudewhohacks/face-api.js/) library to enable the ML model in the application.**
+  <br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features 🔑
 
-### `npm run eject`
+- Register and login features using jwt and bcrypt.js
+- Facerecognizer 😁 using ML model for adding a extra level of security🔐.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **The person can cast a vote only once of the date of his choice.**
+- A person can cast only one vote ⚠
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ### **Data manupulation and visualization** 📈
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - The vote once casted,data is recorded in the database and is visualised as table,BarGraph and LineGraph
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  - The Table shows the data of the persons casted the vote, with the date of vote being casted and the choice
 
-## Learn More
+  - BarGraph shows the count of 'Yes' and 'No' along with the 'Total' number of votes being casted.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - LineGraph shows the count of 'Yes' and 'No' on the particular date on using diffrent Lines on the Graph.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Photo Booth section for making a personalised card after he has casted the vote , as a token of remembrance for sharing it in the social media platform 🐤.**
 
-### Code Splitting
+## Future Scope and some suggested features 👩‍💻
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Keeping in mind the **digital india campaign** the future polling must be done digitally. So this application is a great initiative towards making this possible.
 
-### Analyzing the Bundle Size
+<hr>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### _Towards making the application more secure_ :-
 
-### Making a Progressive Web App
+- **Pre-regrestation of elegible candidate for polling in the elections, and he would be provided the dates for polling.**
+- **Asking user his recent photo for matching him aginst the ML model and verifing the user.**
+- 🛑 Provding the user a date that is end to end encrypted so as to prevent the threatning aginst any political leader.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<hr>
 
-### Advanced Configuration
+## Build with 🚀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [ReactJs](https://reactjs.org/)
+- [Expressjs](https://expressjs.com/)
+- [Mongodb](https://www.mongodb.com/)
+- [ChartJs](https://www.chartjs.org/)
+- [Face-api.js](https://github.com/justadudewhohacks/face-api.js/)
 
-### Deployment
+## Getting Started 🔥
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To a get a local copy for the project follow the steps
+<br>
 
-### `npm run build` fails to minify
+1.  Clone the repository using code in the terminal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+    git clone https://github.com/loneWarrior581/Polling-app-frontend.git
+```
+
+2. Also fork the [Backend](https://github.com/loneWarrior581/Secure-Polling-Backend) for adding more features at the backend
+
+3. For the running in the local machine go to `root` directory and open the terminal and write
+
+- ```
+  npm install
+  ```
+- ```
+  npm start
+  ```
+
+**Made with 💖 by Runtime Terror's**
+
+<hr>
