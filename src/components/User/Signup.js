@@ -40,10 +40,11 @@ export default function SignUp() {
   const classes = useStyles();
   const [values,setValues] = useState({
     email:"",
+    displayName:"",
     password:"",
     passwordCheck:""
     })
-const {email, password,passwordCheck} = values;
+const {email, password,passwordCheck,displayName} = values;
 
 
 const handleChange = event => {
@@ -55,9 +56,9 @@ const handleChange = event => {
 const onSubmit = event => {
   event.preventDefault();
   console.log(values)
-  signup({email,password,passwordCheck})
+  signup({email,password,passwordCheck,displayName})
   .then((data)=>{
-      setValues({email:"",password:"",passwordCheck:""})
+      setValues({email:"",password:"",passwordCheck:"",displayName:""})
   })
 }
 
@@ -73,8 +74,21 @@ const onSubmit = event => {
         </Typography>
         <form className={classes.form} noValidate onSubmit={onSubmit}>
           <Grid container spacing={2}>
-            
+          <Grid item xs={12}>
+              
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="email"
+                label="Display Name"
+                name="displayName"
+                autoComplete="email"
+                onChange={handleChange}
+              />
+            </Grid>
             <Grid item xs={12}>
+
               <TextField
                 variant="outlined"
                 required
