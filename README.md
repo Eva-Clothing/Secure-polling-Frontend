@@ -9,9 +9,13 @@
   <h3 align="center">Vote one Everyone🤞</h3>
   <p align="center">
     <br />
-    <a href="https://dazzling-dijkstra-dbd40e.netlify.app/"><strong> View Demo »</strong></a>
+    <a href="https://competent-cray-16568c.netlify.app/"><strong> View Demo »</strong></a>
     ·
-    <a href="https://github.com/loneWarrior581/Polling-app-frontend/issues">Request Feature</a>
+    <a href="https://github.com/loneWarrior581/Secure-polling-Frontend/issues">Request Feature</a>
+    <br>
+    <a href="https://github.com/loneWarrior581/Secure-Polling-Backend"> <strong>Backend code</strong> </a>
+    <br>
+    <a href="https://youtu.be/uyI3G2dWwIs"> <strong>🎯See Demo @YT 👀</strong> </a>
   </p>
 </p>
 <hr>
