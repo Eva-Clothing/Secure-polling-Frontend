@@ -47,7 +47,7 @@ function Landing() {
             </h3>
             <div>
               <div className="text-center text-lg-start">
-                <a href="#function">
+                <a href="/instructions">
                   <Button color="secondary" variant="contained">
                     Lets Gets started
                   </Button>

@@ -6,10 +6,14 @@ import InfoRoundedIcon from '@material-ui/icons/InfoRounded';
 import HowToVoteRoundedIcon from '@material-ui/icons/HowToVoteRounded';
 import SecurityRoundedIcon from '@material-ui/icons/SecurityRounded';
 import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
+import BrandingWatermarkIcon from '@material-ui/icons/BrandingWatermark';
 import { Link } from "react-router-dom"
 import React from "react"
+import { signout } from '../auth/helper';
+import {Redirect, useHistory} from "react-router-dom"
 
 function DrawerTag ({classes}){
+  const history = useHistory()
     return (
         <div style={{ display: 'flex' }}>
             <Drawer
@@ -64,8 +68,18 @@ function DrawerTag ({classes}){
               <ListItemText primary="LineData" />
             </ListItem>
           </Link>
-
-          <Link to='/logout' className={classes.link} >
+          <Link to='/card' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <BrandingWatermarkIcon />
+              </ListItemIcon>
+              <ListItemText primary="Card" />
+            </ListItem>
+          </Link>
+          <Link  className={classes.link} onClick={()=>{
+            signout()
+            history.push("/")
+          }}>
             <ListItem button>
               <ListItemIcon>
                 <ExitToAppRoundedIcon />
@@ -73,7 +87,6 @@ function DrawerTag ({classes}){
               <ListItemText primary="logout" />
             </ListItem>
           </Link>
-
         </List>
       </Drawer>
     </div>

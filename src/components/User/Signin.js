@@ -72,7 +72,7 @@ export default function SignIn() {
   }
   const performRedirect = () => {
     if (didRedirect || isAuthenticated()) {
-      return <Redirect to='/faceDetection' />
+      return <Redirect to='/instructions' />
     }
   }
 

@@ -15,6 +15,7 @@ import ConfigureStore from './redux/configureStore';
 import FaceDetection from './components/FaceDetection/FaceDetection';
 import PrivateRoute from "./auth/PrivateRoutes"
 import Landing from "./components/Landing/Landing"
+import CardVote from "./components/Card/CardVote"
 
 const useStyles = makeStyles((theme) => ({
   drawerPaper: { width: 'inherit' },
@@ -42,6 +43,7 @@ function App() {
             <PrivateRoute path="/data" component={() => { return <DataTable classes={classes} /> }} />
             <PrivateRoute path="/barGraph" component={() => { return <BarGraph classes={classes} /> }} />
             <PrivateRoute path="/lineGraph" component={() => { return <LineGraph classes={classes} /> }} />
+            <PrivateRoute path="/card" component={CardVote}/>
             <PrivateRoute path="/faceDetection" component={FaceDetection} />
           </Switch>
         </Router>
