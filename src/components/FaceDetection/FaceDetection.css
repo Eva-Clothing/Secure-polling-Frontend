@@ -25,11 +25,13 @@
   align-items: center;
 }
 .buttonConfirm {
+  display: flex;
   margin: 10px;
   margin: auto;
-  width: 30% !important;
+  width: 40% !important;
 }
 .faceAfterCard {
+  justify-content: center;
   margin: 20px auto;
   height: 470px !important;
   width: 40%;

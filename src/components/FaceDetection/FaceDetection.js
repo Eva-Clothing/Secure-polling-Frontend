@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import PlayCircleFilledWhiteRoundedIcon from '@material-ui/icons/PlayCircleFilledWhiteRounded';
 import QueryBuilderRoundedIcon from '@material-ui/icons/QueryBuilderRounded';
+import { Link } from 'react-router-dom'
+
 
 function FaceDetection() {
     const videoHeight = 480;
@@ -79,12 +81,14 @@ function FaceDetection() {
             faceapi.draw.drawFaceExpressions(canvasRef.current, resizedDetections);
 
             console.log(detections[0]);
-            Arr.push(detections[0]);
-            if (Arr.length === 10) {
+            if (detections[0]) {
+                Arr.push(detections[0]);
+            }
+            if (Arr.length === 3) {
                 SetCameraOff(true);
                 clearInterval(interval);
             }
-        }, 1000)
+        }, 1500)
     }
 
 
@@ -105,10 +109,11 @@ function FaceDetection() {
                             <Card className="faceAfterCard">
                                 <h1>Welcome to The polling application </h1>
                             </Card>
-
-                            <Button className="buttonConfirm" variant="outlined" color="secondary">
-                                Cast Vote 👆
-                            </Button>
+                            <Link to='/instructions'>
+                                <Button className="buttonConfirm" variant="outlined" color="secondary">
+                                    Cast Vote 👆
+                                </Button>
+                            </Link>
                         </div>
                     </>
             }

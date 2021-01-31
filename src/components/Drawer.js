@@ -5,77 +5,78 @@ import TimelineRoundedIcon from '@material-ui/icons/TimelineRounded';
 import InfoRoundedIcon from '@material-ui/icons/InfoRounded';
 import HowToVoteRoundedIcon from '@material-ui/icons/HowToVoteRounded';
 import SecurityRoundedIcon from '@material-ui/icons/SecurityRounded';
-import {Link} from "react-router-dom"
+import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
+import { Link } from "react-router-dom"
 import React from "react"
 
-function DrawerTag ({classes}){
-    return (
-        <div style={{ display: 'flex' }}>
-            <Drawer
-              style={{ width: "22%" }}
-              variant="persistent"
-              anchor="left"
-              open={true}
-              classes={{ paper: classes.drawerPaper }}
-            >
-              <List>
-                <Link to='/' className={classes.link} >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <InfoRoundedIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Instructions" />
-                  </ListItem>
-                </Link>
+function DrawerTag({ classes }) {
+  return (
+    <div style={{ display: 'flex' }}>
+      <Drawer
+        style={{ width: "22%" }}
+        variant="persistent"
+        anchor="left"
+        open={true}
+        classes={{ paper: classes.drawerPaper }}
+      >
+        <List>
+          <Link to='/' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <InfoRoundedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Instructions" />
+            </ListItem>
+          </Link>
 
-                <Link to='/vote' className={classes.link} >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <HowToVoteRoundedIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Vote" />
-                  </ListItem>
-                </Link>
+          <Link to='/vote' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <HowToVoteRoundedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Vote" />
+            </ListItem>
+          </Link>
 
-                <Link to='/data' className={classes.link} >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <StorageRoundedIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Data" />
-                  </ListItem>
-                </Link>
+          <Link to='/data' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <StorageRoundedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Data" />
+            </ListItem>
+          </Link>
 
-                <Link to='/barGraph' className={classes.link} >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <BarChartRoundedIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="BarData" />
-                  </ListItem>
-                </Link>
+          <Link to='/barGraph' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <BarChartRoundedIcon />
+              </ListItemIcon>
+              <ListItemText primary="BarData" />
+            </ListItem>
+          </Link>
 
-                <Link to='/lineGraph' className={classes.link} >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <TimelineRoundedIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="LineData" />
-                  </ListItem>
-                </Link>
+          <Link to='/lineGraph' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <TimelineRoundedIcon />
+              </ListItemIcon>
+              <ListItemText primary="LineData" />
+            </ListItem>
+          </Link>
 
-                <Link to='/faceDetection' className={classes.link} >
-                  <ListItem button>
-                    <ListItemIcon>
-                      <SecurityRoundedIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="faceDetection" />
-                  </ListItem>
-                </Link>
+          <Link to='/logout' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <ExitToAppRoundedIcon />
+              </ListItemIcon>
+              <ListItemText primary="logout" />
+            </ListItem>
+          </Link>
 
-              </List>
-            </Drawer>
-          </div>
-        )
+        </List>
+      </Drawer>
+    </div>
+  )
 }
 export default DrawerTag

@@ -32,16 +32,16 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <Router>
-        
+
           <Switch>
-          <Route exact path="/"  component={Landing}/>
-          <Route path="/signin" component={Signin}/>
-          <Route path="/signup" component={Signup}/>
-            <PrivateRoute exact path="/instructions" component={()=>{return <Instructions classes={classes}/>}} />
-            <PrivateRoute exact path="/vote" component={()=>{return <PollMain classes={classes}/>}} />
-            <PrivateRoute path="/data" component={()=>{return <DataTable classes={classes}/>}} />
-            <PrivateRoute path="/barGraph" component={()=>{return <BarGraph classes={classes}/>}} />
-            <PrivateRoute path="/lineGraph" component={()=>{return <LineGraph classes={classes}/>}} />
+            <Route exact path="/" component={Landing} />
+            <Route path="/signin" component={Signin} />
+            <Route path="/signup" component={Signup} />
+            <PrivateRoute exact path="/instructions" component={() => { return <Instructions classes={classes} /> }} />
+            <PrivateRoute exact path="/vote" component={() => { return <PollMain classes={classes} /> }} />
+            <PrivateRoute path="/data" component={() => { return <DataTable classes={classes} /> }} />
+            <PrivateRoute path="/barGraph" component={() => { return <BarGraph classes={classes} /> }} />
+            <PrivateRoute path="/lineGraph" component={() => { return <LineGraph classes={classes} /> }} />
             <PrivateRoute path="/faceDetection" component={FaceDetection} />
           </Switch>
         </Router>

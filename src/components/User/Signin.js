@@ -12,9 +12,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import React, {useState} from 'react';
-import {Redirect} from 'react-router-dom';
-import {signin, authenticate, isAuthenticated} from '../../auth/helper';
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { signin, authenticate, isAuthenticated } from '../../auth/helper';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,26 +39,26 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
-  const [values,setValues] = useState({
-      email:"",
-      password:"",
-      didRedirect:false
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+    didRedirect: false
   })
-  const {email, password,didRedirect} = values;
-  const {user} = isAuthenticated();
+  const { email, password, didRedirect } = values;
+  const { user } = isAuthenticated();
 
   const handleChange = event => {
 
-    setValues({...values, [event.target.name]: event.target.value});
-    
+    setValues({ ...values, [event.target.name]: event.target.value });
+
   }
 
   const onSubmit = event => {
     event.preventDefault();
-    console.log(email,password)
-    signin({email,password})
-    .then(data =>{
-             
+    console.log(email, password)
+    signin({ email, password })
+      .then(data => {
+
         authenticate(data.token, () => {
           setValues({
             ...values,
@@ -66,17 +66,17 @@ export default function SignIn() {
           })
         })
       }
-    )
-    .catch((err)=>{
+      )
+      .catch((err) => {
         console.log(err)
-    })
+      })
   }
   const performRedirect = () => {
-    if(didRedirect || isAuthenticated()){
-        return <Redirect to='/instructions' />
+    if (didRedirect || isAuthenticated()) {
+      return <Redirect to='/faceDetection' />
     }
   }
-  
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -112,7 +112,7 @@ export default function SignIn() {
             autoComplete="current-password"
             onChange={handleChange}
           />
-          
+
           <Button
             type="submit"
             fullWidth
@@ -123,7 +123,7 @@ export default function SignIn() {
             Sign In
           </Button>
           <Grid container>
-           
+
             <Grid item>
               <Link href="/signup" variant="body2">
                 {"Don't have an account? Sign Up"}

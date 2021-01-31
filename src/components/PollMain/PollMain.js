@@ -103,63 +103,63 @@ class pollMain extends Component {
         const textFieldCSS = { margin: '20px 0px' }
         return (
             <div>
-          <Header/>
-            <DrawerTag classes={this.props.classes}/>
-            <Grid>
-                <Snackbar open={this.state.open} autoHideDuration={6000} onClose={this.handleClose}>
-                    <Alert onClose={this.handleClose} severity="success">
-                        This is a success message!
+                <Header />
+                <DrawerTag classes={this.props.classes} />
+                <Grid>
+                    <Snackbar open={this.state.open} autoHideDuration={6000} onClose={this.handleClose}>
+                        <Alert onClose={this.handleClose} severity="success">
+                            This is a success message!
             </Alert>
-                </Snackbar>
+                    </Snackbar>
 
-                <form onSubmit={this.submitForm} autoComplete="off">
-                    <Paper elevation={10} style={paperStyle}>
-                        <Grid align="center">
-                            <Avatar style={{ backgroundColor: "#5cd235", height: "50px", width: "50px", }}><PollRoundedIcon style={{ height: "30px", width: "30px" }} /></Avatar>
-                            <h2>POLL</h2>
-                        </Grid>
-                        <TextField
-                            required
-                            value={this.state.name}
-                            name="name"
-                            onChange={this.handleInput}
-                            style={textFieldCSS}
-                            id="outlined-basic"
-                            label="Name"
-                            variant="outlined"
-                            placeholder="Enter Your Name"
-                            fullWidth color="primary"
-                        />
+                    <form onSubmit={this.submitForm} autoComplete="off">
+                        <Paper elevation={10} style={paperStyle}>
+                            <Grid align="center">
+                                <Avatar style={{ backgroundColor: "#5cd235", height: "50px", width: "50px", }}><PollRoundedIcon style={{ height: "30px", width: "30px" }} /></Avatar>
+                                <h2>POLL</h2>
+                            </Grid>
+                            <TextField
+                                required
+                                value={this.state.name}
+                                name="name"
+                                onChange={this.handleInput}
+                                style={textFieldCSS}
+                                id="outlined-basic"
+                                label="Name"
+                                variant="outlined"
+                                placeholder="Enter Your Name"
+                                fullWidth color="primary"
+                            />
 
-                        <TextField
-                            required
-                            style={textFieldCSS}
-                            id="datetime-local"
-                            name="casted_at"
-                            value={this.state.date}
-                            onChange={this.handleInput}
-                            label="Today's Date"
-                            type="date"
-                            InputLabelProps={{
-                                shrink: true,
-                            }}
-                            fullWidth
-                        />
-                        <FormControl style={{ display: 'flex', alignItems: "center" }}>
-                            <FormLabel className="question" fullWidth component="legend" >Did You liked the LockDown during COVID-19🤔?</FormLabel>
-                            <RadioGroup name="choice" value={this.state.choice} onChange={this.handleInput}>
-                                <FormControlLabel style={{ color: "green", fontWeight: 100 }} value="true" control={<Radio />} label="Yes" />
-                                <FormControlLabel style={{ color: "red" }} value="false" control={<Radio />} label="No" />
-                            </RadioGroup>
-                            <Button fullWidth style={{ margin: "0px auto" }} type="submit" variant="outlined" color="primary">
-                                Cast Vote
+                            <TextField
+                                required
+                                style={textFieldCSS}
+                                id="datetime-local"
+                                name="casted_at"
+                                value={this.state.date}
+                                onChange={this.handleInput}
+                                label="Date of Polling"
+                                type="date"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                                fullWidth
+                            />
+                            <FormControl style={{ display: 'flex', alignItems: "center" }}>
+                                <FormLabel className="question" fullWidth component="legend" >Did You liked the LockDown during COVID-19🤔?</FormLabel>
+                                <RadioGroup name="choice" value={this.state.choice} onChange={this.handleInput}>
+                                    <FormControlLabel style={{ color: "green", fontWeight: 100 }} value="true" control={<Radio />} label="Yes" />
+                                    <FormControlLabel style={{ color: "red" }} value="false" control={<Radio />} label="No" />
+                                </RadioGroup>
+                                <Button fullWidth style={{ margin: "0px auto" }} type="submit" variant="outlined" color="primary">
+                                    Cast Vote
             </Button>
-                        </FormControl>
-                    </Paper>
-                </form>
-            </Grid>
+                            </FormControl>
+                        </Paper>
+                    </form>
+                </Grid>
             </div>
-            
+
 
         )
 
