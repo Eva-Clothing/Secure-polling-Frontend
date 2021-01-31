@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+.app_center {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  text-align: center;
+  height: 65vh;
+  width: 50%;
+  border-radius: 10px !important;
+  box-shadow: 5px 7px 10px 5px #888888 !important;
+}
+.app_center h2 {
+  font-family: "Balsamiq Sans", cursive;
+}
+.center{
+  margin: 15% 50% auto 50%
+}
+.table {
+  margin-top: 20px;
+  overflow-y: scroll;
+  height: 400px;
+  color: #6a5d5d;
+}
+.table tr {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 3px;
+}
+.table td {
+  padding: 0.5rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+.table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+.choice {
+  color: red;
+  padding: 0px 5px;
+  font-size: 23px !important;
+}
+.choice-true {
+  color: rgb(85, 189, 64) !important;
+}

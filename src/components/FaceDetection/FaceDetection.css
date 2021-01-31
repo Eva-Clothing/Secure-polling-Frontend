@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.position-absolute {
+  position: absolute;
+}
+.faceDetect {
+  margin: 0px auto;
+  width: 40%;
+  border-radius: 10px !important;
+  box-shadow: 5px 7px 10px 5px #888888 !important;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buttonConfirm {
+  margin: 10px;
+  margin: auto;
+  width: 30% !important;
+}
+.faceAfterCard {
+  margin: 20px auto;
+  height: 470px !important;
+  width: 40%;
+  border-radius: 10px !important;
+  box-shadow: 5px 7px 10px 5px #888888 !important;
+}
+.progress {
+  padding: 2px;
+
+  /* background-color: green !important; */
+}
+.initial {
+  color: rgb(40, 129, 212);
+}
+.ready {
+  color: rgb(53, 223, 61);
+}

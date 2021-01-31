@@ -1,0 +1,13 @@
+export const VOTE_SUCCESS = "VOTE_SUCCESS";
+export const VOTE_FAIL = "VOTE_FAIL";
+export const VOTE_RESET = "VOTE_RESET";
+export const ADD_DATA = "ADD_DATA";
+export const DATA_LOADING = "DATA_LOADING";
+export const DATA_FAILED = "DATA_FAILED";
+export const POLL_LOADING = "POLL_LOADING";
+export const POLL_FAILED = "POLL_FAILED";
+export const ADD_TRUE_POLL = "GET_TRUE_POLL";
+export const ADD_FALSE_POLL = "GET_FALSE_POLL";
+export const CHART_LOADING = "CHART_LOADING";
+export const CHART_FAILED = "CHART_FAILED";
+export const ADD_CHART_DATA = "GET_CHART_DATA";
